@@ -1,22 +1,42 @@
 package com.company;
 
 import java.io.IOException;
+import java.lang.invoke.SwitchPoint;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import static java.lang.Thread.sleep;
+
 public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        //given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
-        //for example, given n = 3, a solution set is:
-        //[
-        //  "((()))",
-        //  "(()())",
-        //  "(())()",
-        //  "()(())",
-        //  "()()()"
-        //]
+        //switch case
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a what would you like to view?");
+        sleep(1000);
+        System.out.println("1. parentheses");
+        sleep(200);
+        System.out.println("2. power");
+        sleep(200);
+        System.out.println("3. Simple fractions");
+        sleep(200);
+        System.out.println("4. Spaces");
+        int number = scanner.nextInt();
+        switch (number) {
+            case 1:
+                question2 class2 = new question2();
+                class2.main(args);
+                break;
+            case 2:
+                System.out.println("You entered 2");
+                break;
+            case 3:
+                System.out.println("You entered 3");
+                break;
+            default:
+                System.out.println("You entered something else");
+        }
         int n = GetInt("Enter n: ");
         String[] result = GenerateParenthesis(n);
         System.out.println(Arrays.toString(result));
